@@ -9,7 +9,7 @@ import { ROOT_INDEX } from '../../constants/root';
 
 import getDataApi from '../../utils/get-data-api';
 
-import './comics.css';
+import classes from './comics.module.css';
 
 class Comics {
 	async render() {
@@ -23,16 +23,16 @@ class Comics {
 				const imgSrc = `${path}/${IMG_STANDART_XLARGE}.${extension}`;
 
 				htmlContent += `
-				<li class="comics__item" data-url="${url}">
-					<span class="comics__title">${title}</span>
-					<img class="comics__img" src="${imgSrc}" alt="Poster" />
+				<li class="comics__item ${classes.comics__item}" data-url="${url}">
+					<span class="${classes.comics__title}">${title}</span>
+					<img class="img-contain ${classes.comics__img}" src="${imgSrc}" alt="Poster" />
 				</li>
 			`;
 			}
 		});
 
 		let htmlWrapper = `
-			<ul class="comics__container">
+			<ul class="${classes.comics__container}">
 				${htmlContent}
 			</ul>
 		`;

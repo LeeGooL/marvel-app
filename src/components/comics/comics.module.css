@@ -13,6 +13,7 @@
   margin: var(--spacing-large);
 
   background-color: var(--color-light);
+  border: 5px solid orange;
   cursor: pointer;
 
   transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
